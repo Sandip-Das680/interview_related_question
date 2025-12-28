@@ -1,0 +1,15 @@
+def coun_word(text):
+    words=text.split()
+    res={}
+    for char in words:
+        res[char]=res.get(char,0) + 1
+    
+    for word,count in res.items():
+        print(f"{word} = {count}")
+    
+
+text = " Sandip, techno work i in techno krishanu"
+res=text.split(',')
+new_res=" ".join(res)
+coun_word(new_res)
+print(new_res)
