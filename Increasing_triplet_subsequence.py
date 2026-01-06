@@ -36,8 +36,25 @@ def increase_triplet_subsequence(lst):
             return True
     return False
 
+
+def find_triplet(lst):
+
+    first= float('inf')
+    second = float('inf')
+    for num in lst:
+        if num <= first:
+            first=num
+        elif num <= second:
+            second= num
+        else:
+            return(print(first," < ",second," < ", num))
+    return(print("No triplet"))
+
+
 nums = [1,2,3,4,5]
 print(increase_triplet_subsequence(nums))
+
+find_triplet(nums)
         
 
     
